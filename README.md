@@ -1,5 +1,20 @@
 # express-note-taker
 
-Technologies
+# Contents
+- Server.js
+- README.md
+- DB Folder
+    db.json
+- Public folder
+    - assets folder
+        - CSS folder
+        styles.css
+        - JS folder
+        index.js
+- index.html
+- notes.html
+
+
+## Technologies
 - HTML, CSS, JavaScript
-- ExpressJs, Uniqid, Heroku
+- ExpressJs, Uniqid NPM, Heroku

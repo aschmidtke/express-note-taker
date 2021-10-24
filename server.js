@@ -29,7 +29,6 @@ app.get('/api/notes', function (req, res) {
 // write new note
 app.post('/api/notes', function (req, res) {
     let id = uniqid.time();
-    //console.log(id);
     let newNote = {
         id: id,
         title: req.body.title,
@@ -41,22 +40,6 @@ app.post('/api/notes', function (req, res) {
     fs.writeFile('db/db.json', displayNote, (err) => {
         if (err)
         console.log(err);
-    });
-});
-
-// delete note
-app.delete('/api/notes/:id', function (req, res) {
-    let noteID = req.params.id;
-    fs.readFile('db/db.json', 'UTF-8', function (err, data) {
-        let updatedNotes = JSON.parse(data).filter((note) => { // somewhere in here
-            return note.id !== noteID;
-        });
-        //notes = updatedNotes;
-        let displayNote = JSON.stringify(updatedNotes);
-        fs.writeFileSync('db/db.json', displayNote, (err) => {
-            if (err)
-            console.log(err);
-        });
     });
 });
 
