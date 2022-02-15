@@ -1,4 +1,5 @@
 # express-note-taker
+An Express-based note taking application using HTML, CSS and Javascript.
 
 # Contents
 - Server.js
